@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JQuery轮播图</title>
+	<script src="js/jquery-1.8.3.min.js"></script>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        .container{
+            width:750px;
+            height:340px;
+            overflow: hidden;
+            position:relative;
+            margin:0 auto;
+        }
+        .list{
+            width:750px;
+            height:1120px;
+            position:absolute;
+
+        }
+        .list>img{
+            float:left;
+            width:750px;
+            height:340px;
+        }
+        .pointer{
+            position:absolute;
+            width:100px;
+            bottom:20px;
+            left:670px;
+        }
+        .pointer>span{
+            cursor:pointer;
+            display:inline-block;
+            width:10px;
+            height:10px;
+            background: #7b7d80;
+            border-radius:50%;
+            border:1px solid #fff;
+        }
+        .pointer .on{
+            background: yellow;
+        }
+        .arrow{
+            position:absolute;
+            text-decoration:none;
+            width:40px;
+            height:40px;
+            background: #727d8f;
+            color:#fff;
+            font-weight: bold;
+            line-height:40px;
+            text-align:center;
+            top:180px;
+            display:none;
+        }
+        .arrow:hover{
+            background: #0f0f0f;
+        }
+        .left{
+          left:0;
+        }
+        .right{
+            right:0;
+        }
+        .container:hover .arrow{
+            display:block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="list" style="left:0px;">
+            <!--<img src="../static/image/photo1.jpg" alt="5"/>-->
+            <img src="http://www.taoshu.com/img/limingbo.jpg" alt="1"/>
+            <img src="http://www.taoshu.com/img/yueduhui.jpg" alt="2"/>
+            <img src="http://www.taoshu.com/img/tianmao.jpg" alt="3"/>
+            
+            <!--<img src="../static/image/banner.jpg" alt="1"/>-->
+        </div>
+        <div class="pointer">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+           
+        </div>
+     
+    </div>
+
+    <script src="../static/js/jquery-3.2.1.min.js"></script>
+    <script>
+        var imgCount = 3;
+        var index = 1;
+        var intervalId;
+        var buttonSpan = $('.pointer')[0].children;//htmlCollection 集合
+        //自动轮播功能 使用定时器
+        autoNextPage();
+        function autoNextPage(){
+            intervalId = setInterval(function(){
+                nextPage(true);
+            },3000);
+        }
+        //当鼠标移入 停止轮播
+        $('.container').mouseover(function(){
+            console.log('hah');
+            clearInterval(intervalId);
+        });
+        // 当鼠标移出，开始轮播
+        $('.container').mouseout(function(){
+            autoNextPage();
+        });
+        //点击下一页 上一页的功能
+        // $('.left').click(function(){
+        //     nextPage(true);
+        // });
+        // $('.right').click(function(){
+        //     nextPage(false);
+        // });
+        //小圆点的相应功能  事件委托
+        clickButtons();
+        function clickButtons(){
+            var length = buttonSpan.length;
+            for(var i=0;i<length;i++){
+                buttonSpan[i].onmouseenter = function(){
+                    $(buttonSpan[index-1]).removeClass('on');
+                    if($(this).attr('index')==1){
+                        index = 3;
+                    }else{
+                        index = $(this).attr('index')-1;
+                    }
+                    nextPage(true);
+
+                };
+            }
+        }
+        function nextPage(next){
+            var targettop = 0;
+            //当前的圆点去掉on样式
+            $(buttonSpan[index-1]).removeClass('on');
+            if(next){//往后走
+                if(index == 3){//到最后一张，直接跳到第一张
+                    targettop = 0;
+                    index = 1;
+                }else{
+                    index++;
+                    targettop = -340*(index-1);
+                }
+
+            }else{//往前走
+                if(index == 1){//在第一张，直接跳到第五张
+                    index = 3;
+                    targettop = -340*(imgCount-1);
+                }else{
+                    index--;
+                    targettop = -340*(index-1);
+                }
+
+            }
+            $('.list').animate({top:targettop+'px'});
+            //更新后的圆点加上样式
+            $(buttonSpan[index-1]).addClass('on');
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

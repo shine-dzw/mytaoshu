@@ -1,0 +1,129 @@
+html,body{
+	/* height:2000px; */
+	} 
+button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+} 
+body{
+	color:#333;
+	font-family: "宋体";
+}
+a {
+	text-decoration: none;
+}
+ol,ul{
+	list-style:none;
+} 
+em,i{
+	font-style: normal;
+}
+img{
+	border:0;
+}
+input{
+	border: none;
+}
+li{
+	list-style: none;
+}
+.footer{
+	width:100%;
+} 
+.public_footer{
+	width:1210px;
+	padding-left:120px;
+	padding-top:32px;
+	margin:0 auto;
+	
+} 
+
+.footbox1{
+	width: 137px;
+    padding: 0 21px 0 1px;
+    display: block;
+    float: left;
+	
+}
+.footer .footer_h4{
+	font-size: 14px;
+	border-bottom: 1px solid #dcdcdc;
+    height: 22px;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 137px;
+    background: url(../img/icon_footer.png) no-repeat 14px 0
+} 
+.footer_ul li{
+	padding-left: 30px;
+    background: url(../img/icon_footer.png) no-repeat 17px -177px;
+    height: 20px;
+    line-height: 20px;
+	}
+.footer_ul li a{
+	font-size: 12px;
+	color:#333333;
+}
+.clear{
+	clear: both;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+.friendlink{
+	border: 1px solid #dcdcdc;
+	width:1200px;
+	margin:10px auto 0px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    line-height: 24px;
+    height: 60px;
+    overflow: hidden;
+} 
+.friendlink h4{
+	float: left;
+    padding-left: 5px;
+    font-size: 14px;
+    color: #546f60;
+	padding-right:75px;
+	} 
+.friendlink  a{
+	font-size: 12px;
+	color: #000000;
+	padding:0 25px;
+}
+.friendlink  a:hover{
+	color: red;
+	text-decoration: underline;
+} 
+.footer_nav{
+	text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+} 
+.footer_nav a{
+	font-size: 12px;
+	color:#000000;
+} 
+.copyright span a{
+	font-size: 12px;
+	color:#000000;
+}
+.sep{
+	display: inline-block;
+    padding: 0 8px;
+} 
+.copyright{
+	text-align: center;
+	margin:0 auto;
+	font-size: 14px;
+} 
+.footer_foot{
+	text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+}

@@ -1,0 +1,17 @@
+KISSY.ready(function (o) {
+    var e = o.all("#j_books li");
+    e.each(function (n) {
+        n.on("mouseover", function () {
+            e.removeClass("selected"), o.one(this).addClass("selected")
+        })
+    }),
+    KISSY.use("ua,event,node,overlay", function (o, e, n, t, s) {
+        dialog = new s.Dialog({ width: 950, elCls: "my", elStyle: { position: 6 == e.ie ? "absolute" : "fixed" }, bodyContent: '<a href="http://www.taoshu.com/qianggou/"><img width="950" height="477" src="http://a.tscdn.cn/pic/qianggou/qg13.png" /></a>', mask: !0, draggable: !0, align: { points: ["cc", "cc"] }, closeAction: "destroy" })
+    })
+}),
+KISSY.use("datalazyload,switchable", function (o, e, n) {
+    var t = n.Tabs; o.ready(function () {
+        new t(".announce", { switchTo: 0 }), new t("#sbook1", { switchTo: 0 }), new t("#sbook2", { switchTo: 0 }), new t("#sbook3", { switchTo: 0 }), new t("#sbook4", { switchTo: 0 })
+    })
+}),
+KISSY.use("switchable", function (o, e) { e.autoRender() });

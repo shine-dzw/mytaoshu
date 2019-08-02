@@ -1,0 +1,26 @@
+var S = KISSY, dialog = null, url = unescape(window.location.href);
+function CreateDialog(a, e) {
+    S.use("ua,event,overlay", function (b, d, c, f) {
+        function h() { dialog.get("visible") && dialog.center() } dialog = new f.Dialog({ width: 330, headerContent: "\u6dd8\u4e66\u767b\u5f55", bodyContent: '<iframe scrolling="no" height="205" width="330" frameborder="0" name="popupIframe" src="/poplogin.aspx?action=' + a + "&id=" + e + "&ReturnUrl=" + url + '"></iframe>', mask: !0, align: { points: ["cc", "cc"] }, draggable: !1, aria: !0, closeAction: "destroy", elStyle: { position: 6 == d.ie ? "absolute" : "fixed" } }); dialog.on("destroy",
+        function () { c.detach(window, "scroll", h) }); if (6 == d.ie) c.on(window, "scroll", h); dialog.show()
+    })
+} function CloseDialog() { null != dialog && dialog.destroy() }
+KISSY.ready(function (a) {
+    function e() { var a = b.attr(g, "name"); return k.value = a }
+    var b = a.DOM, d = a.Event;
+    a.one("#kw") && (setTimeout(function () { "" == a.one("#kw").val() ? a.one("#lb").css("display", "block") : a.one("#lb").css("display", "none") }, 1), a.one("#kw").on("focusin", function () { a.one("#lb").css("display", "none") }), a.one("#kw").on("focusout", function () { "" == a.one("#kw").val() && a.one("#lb").css("display", "block") })); var c = a.one("#left-menu"); 
+    var f = a.all(".mainCate"), h = a.all(".submenu");
+    0 < f.length && f.each(function (b) {
+        b.on("mouseenter", function () { f.removeClass("on"); h.hide(); var b = a.one(this); b.addClass("on"); b.one(".submenu").show() });
+        b.on("mouseleave", function () { f.removeClass("on"); h.hide() })
+    });
+    6 === a.UA.ie && (a.all(".menu").on("mouseenter", function () { a.one(this).addClass("hover") }), a.all(".menu").on("mouseleave", function () { a.one(this).removeClass("hover") })); var j = a.all("#options li"),
+    g = b.get("#select-t"), i = b.get("#select-type"), l = b.get(".all-field"), k = b.get("#f"), m = e(); b.get("#options"); d.on(g, "mouseenter", function () { b.addClass(i, "select-current") }); d.on(l, "click", function (a) { T = a.target; b.removeClass(j, "selecteds"); g.innerHTML = T.innerHTML; b.attr(g, "name", ""); e() }); d.on(i, "mouseout", function (a) { a = a.relatedTarget; i !== a && !b.contains(i, a) && b.removeClass(i, "select-current") }); a.each(j, function (a) {
+        var c = b.attr(a, "name"); m == c && b.addClass(a, "selecteds"); d.on(a, "mouseover", function () {
+            b.addClass(a,
+            "bg")
+        }); d.on(a, "mouseout", function () { b.removeClass(a, "bg") }); d.on(a, "click", function () { g.innerHTML = a.innerHTML; var c = b.attr(a, "name"); b.attr(g, "name", c); e(); b.removeClass(j, "selecteds"); b.addClass(a, "selecteds") })
+    })
+}); KISSY.use("datalazyload", function (a) { a.ready(function (a) { a.DataLazyload({ mod: "auto" }) }) });
+KISSY.use("suggest", function (a, e) { e = a.Suggest; (new e("#kw", "http://suggestion.baidu.com/su?p=3&cb=window.bdsug.sug", { resultFormat: "", containerCls: "baidu-sug", charset: "gb2312", queryName: "wd", callbackFn: "bdsug.sug" })).on("dataReturn", function () { this.returnedData = this.returnedData.s || [] }) });
+function ShowMsg(a, e) { var b = KISSY, d = b.one(".msg"), c = b.one(".msg-default"), b = b.one(".msg-content"); d.removeClass("hidden"); a ? (c.removeAttr("class"), c.addClass("msg-default msg-ok")) : (c.removeAttr("class"), c.addClass("msg-default msg-error")); b.html(e) };

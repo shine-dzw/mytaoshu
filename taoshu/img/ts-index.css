@@ -1,0 +1,914 @@
+.property .num {
+    /*background: url(../img/bg.png) no-repeat -74px -202px;*/
+    float: left;
+    height: 30px;
+    overflow: hidden;
+    width: 200px;
+}
+
+.num2 {
+    background-position: -74px -232px;
+}
+
+.num3 {
+    background-position: -74px -252px;
+}
+
+.num4 {
+    background-position: -74px -272px;
+}
+
+.num5 {
+    background-position: -74px -292px;
+}
+
+.num6 {
+    background-position: -74px -312px;
+}
+
+.num7 {
+    background-position: -74px -332px;
+}
+
+.num8 {
+    background-position: -74px -352px;
+}
+
+.num9 {
+    background-position: -74px -372px;
+}
+
+.num10 {
+    background-position: -79px -392px;
+}
+
+.num11 {
+    background-position: -79px -412px;
+}
+
+.num12 {
+    background-position: -79px -432px;
+}
+
+.num13 {
+    background-position: -79px -452px;
+}
+
+.num14 {
+    background-position: -79px -472px;
+}
+
+.num15 {
+    background-position: -79px -492px;
+}
+
+#slide {
+    margin-top: 0px;
+    position: relative;
+    width: 750px;
+    height: 340px;
+    border: 1px solid #d8d8d8;
+    overflow: hidden;
+}
+
+    #slide .ks-switchable-nav {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        z-index: 99;
+    }
+
+        #slide .ks-switchable-nav li {
+            float: left;
+            width: 16px;
+            height: 16px;
+            border-radius:10px;
+            line-height: 16px;
+            margin-left: 3px;
+            background-color: #e8e5de;
+            border: 1px solid #c7744f;
+            color: #c7744f;
+            text-align: center;
+            cursor: pointer;
+        }
+
+            #slide .ks-switchable-nav li.ks-active {
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+                margin-top: -1px;
+                color: #EE1289;
+                background-color: #EEEE00;
+                font-weight: bold;
+            }
+
+    #slide .ks-switchable-content li {
+        height: 340px;
+        width: 750px;
+        overflow: hidden;
+    }
+
+    #slide .ks-switchable-nav li, #slide .ks-switchable-trigger-content {
+        position: relative;
+    }
+
+    #slide .ks-switchable-trigger-mask {
+        position: absolute;
+        right: 0;
+        width: 18px;
+        height: 18px;
+        border-radius:20px;
+        /*background-color: #546f60;*/
+        visibility: hidden;
+    }
+
+    #slide .ks-active .ks-switchable-trigger-mask {
+        visibility: visible;
+    }
+
+.newbook, .tejiabook, .authors, .bookrank{
+    /*height:560px;*/
+    overflow: hidden;
+    /*border: 1px solid #d8d8d8;*/
+    margin-top: 10px;
+}
+
+.tejiabook {
+    width:1198px;
+}
+
+/*.authors {
+    height: 275px;
+}*/
+
+.bookrank {
+    height: 550px;
+}
+
+.t-top {
+    border-bottom: 1px solid #c6c6c6;
+    color: #404040;
+    height: 38px;
+    line-height: 38px;
+    margin-bottom: 6px;
+    padding-left: 13px;
+    position: relative;
+}
+
+    .t-top span {
+        color: #aac70a;
+    }
+
+    .t-top strong {
+        float: left;
+        font-weight: bold;
+    }
+
+.menu2 {
+    color: #757575;
+    float: right;
+    font-size: 12px;
+}
+
+    .menu2 ul {
+        float: left;
+    }
+
+        .menu2 ul li {
+            float: left;
+            position: relative;
+            cursor: pointer;
+            outline: 0;
+        }
+
+            .menu2 ul li a {
+                float: left;
+                margin: 0 8px;
+            }
+
+            .menu2 ul li em {
+                cursor: pointer;
+                margin: 0 8px;
+                color: #546f60;
+                font-weight: bold;
+            }
+
+                .menu2 ul li em a {
+                    color: #546f60;
+                    font-weight: bold;
+                    float: none;
+                    margin: 0;
+                }
+
+                    .menu2 ul li em a:hover {
+                        text-decoration: none;
+                        color: #c7744f;
+                        font-weight: bold;
+                    }
+
+            .menu2 ul li.ks-active em {
+                color: #c7744f;
+                font-weight: bold;
+            }
+
+            .menu2 ul li.ks-active s {
+                background: url("../img/bg.png") no-repeat scroll -2px -381px transparent;
+                height: 5px;
+                left: 50%;
+                margin-left: -7px;
+                position: absolute;
+                top: 34px;
+                width: 13px;
+            }
+.newbook{
+    width:1200px;
+}
+.newbook ul.travel-ul li, .tejiabook ul.travel-ul li {
+    float: left;
+    height: 250px;
+    overflow: hidden;
+    padding-left: 19px;
+    padding-top:10px;
+    width: 220px;
+}
+
+.travel-ul .price {
+    text-align: center;
+}
+
+.t-top .extra-text {
+    float: right;
+    font-size: 12px;
+}
+
+    .t-top .extra-text a {
+        background: url("../img/bg.png") no-repeat scroll 0 -486px transparent;
+        padding-left: 12px;
+        margin: 0 8px;
+    }
+
+.authors-info {
+    /*border-right: 1px solid #e2e2e2;*/
+    float: left;
+    padding: 15px;
+    /*width: 487px;*/
+}
+
+.authors-img {
+    float: left;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding-right: 25px;
+}
+
+    .authors-img img {
+        border: #dedede 1px solid;
+        float: left;
+        clear: both;
+        margin-bottom: 5px;
+    }
+
+.authors-info p {
+    float: left;
+    line-height: 22px;
+    width:650px;
+}
+
+.authors-info a.author-more {
+    color: #546f60;
+    font-weight: bolder;
+}
+
+.authors-list {
+    float: right;
+    width: 190px;
+    overflow: hidden;
+    padding-top: 9px;
+}
+
+    .authors-list ol li {
+        float: left;
+        margin-left: 9px;
+        margin-bottom: 5px;
+        text-align: center;
+        width: 82px;
+        display: inline !important;
+    }
+
+        .authors-list ol li img {
+            width: 80px;
+            border: #dedede 1px solid;
+            float: left;
+            clear: both;
+            margin-bottom: 5px;
+        }
+
+        .authors-list ol li a:hover img {
+            border: #c7744f 1px solid;
+        }
+
+.paihang {
+    overflow: hidden;
+    width: 708px;
+}
+
+.paihang_content {
+    border-right: 1px solid #e2e2e2;
+    float: left;
+    padding: 15px;
+    width: 487px;
+}
+
+    .paihang_content .detail {
+        height: 122px;
+        overflow: hidden;
+        width: 456px;
+    }
+
+        .paihang_content .detail .num {
+            height: 29px;
+            margin-right: 5px;
+            width: 26px;
+        }
+
+        .paihang_content .detail .pic {
+            float: left;
+            border: 1px solid #fff;
+            height: 120px;
+            position: relative;
+            width: 120px;
+        }
+
+            .paihang_content .detail .pic a {
+                display: block;
+                height: 120px;
+                overflow: hidden;
+                text-align: center;
+                width: 120px;
+            }
+
+        .paihang_content .detail .description_wrapper {
+            display: table;
+            float: left;
+            height: 122px;
+            padding-left: 7px;
+            width: 296px;
+            *position: relative;
+        }
+
+        .paihang_content .detail .description_content {
+            display: table-cell;
+            vertical-align: middle;
+            *position: absolute;
+            *top: 50%;
+        }
+
+        .paihang_content .detail .description {
+            *position: relative;
+            *top: -50%;
+        }
+
+            .paihang_content .detail .description p {
+                cursor: default;
+                height: 19px;
+                overflow: hidden;
+                margin-top: 5px;
+            }
+
+            .paihang_content .detail .description .bookname {
+                height: 19px;
+                overflow: hidden;
+                width: 296px;
+            }
+
+                .paihang_content .detail .description .bookname a {
+                    color: #546f60;
+                    display: block;
+                    height: 19px;
+                    font-size: 14px;
+                    overflow: hidden;
+                    line-height: 19px;
+                    font-weight: bolder;
+                }
+
+            .paihang_content .detail .description .tip {
+                cursor: default;
+                height: auto;
+                overflow: hidden;
+            }
+
+            .paihang_content .detail .description .discount {
+                color: #546f60;
+                padding-left: 10px;
+            }
+
+.paihang .list_v {
+    height: 362px;
+    overflow: hidden;
+    width: 487px;
+}
+
+.paihang_content .list_v li {
+    float: left;
+    height: 154px;
+    overflow: hidden;
+    padding: 27px 5px 0 0;
+    width: 114px;
+}
+
+.paihang_content .list_v .num {
+    width: 22px;
+}
+
+.paihang_content .list_v .listitem {
+    float: left;
+    width: 92px;
+}
+
+    .paihang_content .list_v .listitem .pic {
+        border: 1px solid #fff;
+        height: 90px;
+        position: relative;
+        width: 90px;
+    }
+
+        .paihang_content .list_v .listitem .pic a {
+            display: block;
+            height: 90px;
+            overflow: hidden;
+            text-align: center;
+            width: 90px;
+        }
+
+    .paihang_content .list_v .listitem p {
+        margin-top: 1px;
+        overflow: hidden;
+        width: 90px;
+    }
+
+    .paihang_content .list_v .listitem .bookname {
+        height: 36px;
+        overflow: hidden;
+        margin-top: 6px;
+        text-align: center;
+    }
+
+        .paihang_content .list_v .listitem .bookname a {
+            height: 36px;
+            overflow: hidden;
+        }
+
+    .paihang_content .list_v .listitem .discount {
+        color: #546f60;
+        padding-left: 10px;
+    }
+
+.paihang .list_h {
+    float: right;
+    overflow: hidden;
+    width: 190px;
+}
+
+    .paihang .list_h li {
+        height: 62px;
+        overflow: hidden;
+        padding: 15px 9px 5px 9px;
+        vertical-align: middle;
+        width: 190px;
+    }
+
+    .paihang .list_h .listitem {
+        float: left;
+        height: 62px;
+        width: 150px;
+    }
+
+        .paihang .list_h .listitem .pic {
+            float: left;
+            height: 60px;
+            position: relative;
+            width: 60px;
+            text-align: center;
+        }
+
+            .paihang .list_h .listitem .pic a {
+                display: block;
+                height: 60px;
+                overflow: hidden;
+                text-align: center;
+                width: 60px;
+            }
+
+        .paihang .list_h .listitem .description_wrapper {
+            display: table;
+            float: left;
+            height: 62px;
+            padding-left: 8px;
+            width: 82px;
+            *position: relative;
+        }
+
+        .paihang .list_h .listitem .description_content {
+            display: table-cell;
+            vertical-align: middle;
+            *position: absolute;
+            *top: 50%;
+        }
+
+        .paihang .list_h .listitem .description {
+            *position: relative;
+            *top: -50%;
+        }
+
+            .paihang .list_h .listitem .description p {
+                cursor: default;
+                height: 18px;
+                overflow: hidden;
+                width: 82px;
+            }
+
+            .paihang .list_h .listitem .description .bookname {
+                height: auto;
+            }
+
+            .paihang .list_h .listitem .description .price {
+                margin-top: 2px;
+            }
+
+            .paihang .list_h .listitem .description .price_d {
+                color: #ff4a00;
+                font-family: Arial;
+                font-weight: bold;
+            }
+
+                .paihang .list_h .listitem .description .price_d em {
+                    padding-left: 1px;
+                }
+
+            .paihang .list_h .listitem .description .discount {
+                color: #546f60;
+                padding-left: 5px;
+            }
+
+.homepage_login {
+    position: relative;
+    margin-top: 10px;
+    width: 190px;
+    height: 38px;
+}
+
+    .homepage_login a {
+        float: left;
+        height: 38px;
+        width: 100px;
+        background: url(../img/bg.png) 0 -511px no-repeat;
+        line-height: 90px;
+        overflow: hidden;
+        font-size: 0;
+    }
+
+        .homepage_login a.loginup:hover {
+            background-position: 0 -587px;
+        }
+
+        .homepage_login a.login {
+            width: 90px;
+            background-position: 0 -549px;
+        }
+
+            .homepage_login a.login:hover {
+                background-position: 0 -625px;
+            }
+
+.announce .hd a, .announce .bd a {
+    color: #666;
+}
+
+.announce .hd .ks-active a {
+    color: #546f60;
+}
+
+.announce .hd a:hove, .announce .bd a:hove {
+    color: #546f60;
+}
+
+.announce .hd li a {
+    font-weight: bolder;
+}
+
+.announce .hd .no-hover {
+    cursor: default;
+}
+
+    .announce .hd .no-hover:hover {
+        text-decoration: none;
+        color: #546f60;
+    }
+
+.announce .hd li, .announce .bd li {
+    float: left;
+    display: inline;
+    outline: medium none;
+}
+
+.announce .hd {
+    height: 26px;
+    margin-bottom: -1px;
+}
+
+    .announce .hd ul {
+        border: 1px solid #d8d8d8;
+        border-bottom: 0;
+    }
+
+    .announce .hd li {
+        height: 24px;
+        width: 98px;
+        line-height: 24px;
+        text-align: center;
+        border-left: 1px solid #f6f6f6;
+        border-right: 1px solid #f6f6f6;
+        margin-left: -1px;
+        background: #f6f6f6;
+    }
+
+    .announce .hd .ks-active {
+        border-color: #d8d8d8;
+        position: relative;
+        height: 25px;
+        background: #FFF;
+    }
+
+    .announce .hd .tab-holder-notice {
+        border-left: 1px solid #d8d8d8;
+    }
+
+    .announce .hd .tab-holder-cw {
+        border-right: 0;
+        width: 89px;
+    }
+
+.announce .bd {
+    border: 1px solid #d8d8d8;
+    width: 188px;
+    height: 117px;
+    _overflow: hidden;
+}
+
+    .announce .bd ul {
+        width: 188px;
+    }
+
+    .announce .bd li {
+        height: 20px;
+        line-height: 20px;
+        padding-left: 9px;
+        padding-bottom: 1px;
+        background: url('../img/bg-line.png') 0 -2px no-repeat;
+        overflow: hidden;
+        margin-right: 20px;
+        width: 168px;
+    }
+
+.announce .tab-panel {
+    display: none;
+    padding: 7px 0 7px 10px;
+}
+
+.announce {
+    position: relative;
+    width: 190px;
+    margin-top: 10px;
+}
+
+    .announce .focus li {
+        height: 24px;
+        line-height: 24px;
+        padding-left: 9px;
+        padding-bottom: 1px;
+        overflow: hidden;
+        margin-right: 20px;
+        width: 168px;
+    }
+
+.everyday {
+    width: 228px;
+    height: 292px;
+    float: left;
+    border: 1px solid #d8d8d8;
+    position: relative;
+    margin-top: 10px;
+}
+
+.everyday-book {
+    clear: both;
+    padding: 5px 10px 5px 10px;
+}
+
+    .everyday-book p {
+        clear: both;
+        color: #757575;
+        line-height: 22px;
+    }
+
+    .everyday-book .w100 {
+        float: left;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+    }
+
+.everyday-book-right {
+    float: left;
+    width: 108px;
+    height: 106px;
+    overflow: hidden;
+}
+
+.everyday-book-name {
+    line-height: 18px;
+    padding-bottom: 3px;
+}
+
+.everyday-book .price {
+    height: 15px;
+    padding-bottom: 3px;
+}
+
+    .everyday-book .price span {
+        padding-left: 0;
+        font-weight: bold;
+        color: #ff4a00;
+    }
+
+.yj {
+    text-decoration: line-through;
+}
+
+.goBuy {
+    padding-top: 10px;
+}
+
+    .goBuy a {
+        background: url(../img/bg.png) no-repeat 0 -655px;
+        display: block;
+        width: 90px;
+        height: 23px;
+        text-align: center;
+        line-height: 23px;
+        color: #fff;
+    }
+
+        .goBuy a:hover {
+            color: #fff;
+        }
+
+a.mores {
+    color: #546f60;
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    padding: 5px;
+}
+
+    a.mores:hover {
+        color: #c7744f;
+    }
+
+.tjtj-left {
+    width: 228px;
+    border: 1px solid #d8d8d8;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+    .tjtj-left ul {
+        padding: 5px 10px 5px 10px;
+    }
+
+.book-ul li.selected .tbook-info {
+    padding-left: 8px;
+    width: 118px;
+}
+
+.tss-category dl dd {
+    border-bottom: 1px solid #e5e5e5;
+    color: #808080;
+    height: 28px;
+    line-height: 28px;
+}
+
+    .tss-category dl dd a {
+        color: #808080;
+        margin: 0 8px;
+    }
+
+.tss-category {
+    border-color: #d8d8d8;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    margin-top: 10px;
+    position: relative;
+    float: left;
+    width: 228px;
+}
+
+    .tss-category dl dt {
+        background: none repeat scroll 0 0 #f8f8f8;
+        border-bottom: 1px solid #e5e5e5;
+        font-weight: bold;
+        height: 24px;
+        padding-left: 12px;
+        padding-top: 9px;
+    }
+
+        .tss-category dl dt.all {
+            padding-left: 110px;
+            padding-top: 9px;
+        }
+
+    .tss-category dl dd {
+        padding-left: 17px;
+    }
+
+    .tss-category dl dt a {
+        color: #546f60;
+    }
+
+.tss-publisher {
+    border: solid 1px #d8d8d8;
+    margin-top: 10px;
+    position: relative;
+    float: left;
+    width: 228px;
+    height: 321px;
+}
+
+    .tss-publisher ul li {
+        width: 200px;
+        margin-left: 24px;
+        height: 24px;
+        line-height: 24px;
+        overflow: hidden;
+        position: relative;
+        padding-top: 5px;
+    }
+
+        .tss-publisher ul li.pubimg {
+            height: 49px;
+            padding-top: 5px;
+        }
+
+        .tss-publisher ul li img {
+            width: 180px;
+            height: 47px;
+            border: solid 1px #e5e5e5;
+        }
+
+.friendlinks {
+    border: 1px solid #dcdcdc;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px;
+    line-height: 24px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.friendlinks h4 {
+    float: left;
+    padding-left: 5px;
+    font-size: 14px;
+    color: #546f60;
+}
+
+.friendlinks table {
+    float: right;
+}
+
+.friendlinks table td {
+    width: 107px;
+}
+
+.bookrank2{
+width:1200px;
+}
+.bookrank2 ul.travel-ul li{
+    float: left;
+    height: 250px;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-top:12px;
+    width: 190px;
+}
+
+.bookrank2 ul.travel-ul li .num{
+   
+    width: 30px;
+}
+.bookrank2{
+    overflow: hidden;
+    border: 1px solid #d8d8d8;
+    margin-top: 10px;
+}
